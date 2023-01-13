@@ -52,7 +52,7 @@ export const ProductName = styled(H3)`
   margin-top: 9px;
   margin-bottom: 3px;
   @media (max-width: 576px) {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 `;
 export const ProductLink = styled(BtnLink)`
@@ -61,7 +61,7 @@ export const ProductLink = styled(BtnLink)`
 export const ProductCategory = styled.span`
   font-size: 0.9rem;
   @media (max-width: 576) {
-    font-size: 0.8rem;
+    font-size: 0.79rem;
   }
 `;
 export const ProductInfo = styled.div`
@@ -69,11 +69,11 @@ export const ProductInfo = styled.div`
   position: relative;
 `;
 export const ProductPrice = styled.span`
-  color: var(--primary-color);
+  color: ${props => props.theme.colors.primaryColor};
   font-size: 1.3rem;
   font-weight: 500;
   @media (max-width: 576px) {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 `;
 export const IconContainer = styled.span`
@@ -83,7 +83,7 @@ export const IconContainer = styled.span`
   right: -100px;
 `;
 export const AddToCartIcon = styled(RiAddLine)`
-  background-color: var(--primary-color);
+  background-color: ${props => props.theme.colors.primaryColor};
   padding: 5px;
   font-size: 1.3rem;
   color: #fff;

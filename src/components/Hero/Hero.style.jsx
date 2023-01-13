@@ -7,7 +7,7 @@ import {
 } from "../../globalStyles/Global.styles";
 
 export const HeroSection = styled.section`
-  background-color: var(--hero-bg);
+  background-color: ${props => props.theme.colors.heroBg};
   @media (max-width: 991px) {
     padding: 45px 0;
   }
@@ -33,7 +33,7 @@ export const LeftContainer = styled.div`
 `;
 export const HeroContent = styled.div``;
 export const HeroText = styled(TextWrapper)`
-  color: var(--primary-color);
+  color: ${props => props.theme.colors.primaryColor};
   line-height: 28px;
   &:nth-child(1) {
     font-weight: 500;
@@ -41,6 +41,19 @@ export const HeroText = styled(TextWrapper)`
 `;
 export const HeroHeading = styled(H1)`
   margin: 20px 0;
+  font-size: 1.5rem;
+  @media (min-width: 576px) and (max-width: 767px) {
+    font-size: 2rem;
+  }
+  @media (min-width: 768px) and (max-width: 991px) {
+    font-size: 2.3rem;
+  }
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    font-size: 2.5rem;
+  }
+  @media (min-width: 1200px) {
+    font-size: 2.6rem;
+  }
 `;
 export const HeroButton = styled(Button)`
   margin-top: 40px;

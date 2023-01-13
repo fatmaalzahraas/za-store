@@ -11,7 +11,7 @@ const styles = css`
   }
 `;
 export const FooterWrapper = styled.footer`
-  background-color: var(--primary-color);
+  background-color: ${props => props.theme.colors.primaryColor};
   padding: 60px 0 30px 0;
 `;
 export const FooterContent = styled.div`

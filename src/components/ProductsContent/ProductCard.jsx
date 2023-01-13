@@ -12,7 +12,31 @@ import {
   ProductLink,
 } from "./Products.style";
 import { motion } from "framer-motion";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../redux-toolkit/cartSlice";
+import { toast } from "react-toastify";
+import { useLocation } from "react-router-dom";
 const ProductCard = ({ item }) => {
+  let location = useLocation();
+  const dispatch = useDispatch();
+  const addToCartFn = () => {
+    dispatch(
+      addToCart({
+        id: item.id,
+        productName: item.productName,
+        imgUrl: item.imgUrl,
+        price: item.price,
+      })
+    );
+    toast.success("Product added to cart successfully");
+  };
+  const navigationFn = (product) => {
+    return location.pathname === "/shop"
+      ? `${product.id}`
+      : location.pathname === `shop/${product.id}`
+      ? `#`
+      : `/shop/${product.id}`;
+  };
   return (
     <ProductItem>
       <ProductImgWrapper>
@@ -24,12 +48,16 @@ const ProductCard = ({ item }) => {
         />
       </ProductImgWrapper>
       <ProductName>
-        <ProductLink to={`shop/${item.id}`}>{item.productName}</ProductLink>
+        <ProductLink to={navigationFn(item)}>{item.productName}</ProductLink>
       </ProductName>
       <ProductCategory>{item.category}</ProductCategory>
       <ProductInfo>
         <ProductPrice>${item.price}</ProductPrice>
-        <IconContainer as={motion.span} whileTap={{ scale: 1.9 }}>
+        <IconContainer
+          as={motion.span}
+          whileTap={{ scale: 1.9 }}
+          onClick={addToCartFn}
+        >
           <AddToCartIcon />
         </IconContainer>
       </ProductInfo>

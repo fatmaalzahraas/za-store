@@ -118,15 +118,15 @@ const products = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
     reviews: [
       {
-        rating: 4.6,
+        rating: 4,
         text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
       },
       {
-        rating: 4.9,
+        rating: 4.4,
         text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
       },
     ],
-    avgRating: 4.7,
+    avgRating: 4.4,
   },
   {
     id: "05",
@@ -536,15 +536,15 @@ const products = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
     reviews: [
       {
-        rating: 4.8,
+        rating: 3.3,
         text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
       },
       {
-        rating: 4.9,
+        rating: 3.2,
         text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
       },
     ],
-    avgRating: 4.8,
+    avgRating: 3.5,
   },
   {
     id: "23",

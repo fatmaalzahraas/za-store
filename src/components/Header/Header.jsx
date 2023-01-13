@@ -20,6 +20,8 @@ import {
 } from "./Header.style";
 import userIcon from "../../assets/images/user-icon.png";
 import {motion} from 'framer-motion';
+import { useSelector } from "react-redux";
+import {useNavigate} from "react-router-dom";
 const navLinks = [
   {
     path: "/",
@@ -35,8 +37,13 @@ const navLinks = [
   }
 ]
 const Header = () => {
+  const totalQuantity = useSelector((state) => state.cart.totalQuantity);
   const navbarRef = useRef(null);
   const navigationRef = useRef(null);
+  const navigate = useNavigate();
+  const navigateFn = () => {
+    navigate('cart');
+  }
   const navigationMenuToggling = () => {
     navigationRef.current.classList.toggle("menu-active");
   }
@@ -73,9 +80,9 @@ const Header = () => {
             </NavMenu>
             </Navigation>
             <NavIconsContainer>
-              <CartBagContainer>
+              <CartBagContainer onClick={navigateFn}>
               <CartBagIcon></CartBagIcon>
-              <CartBagItemsNumber>12</CartBagItemsNumber>
+              <CartBagItemsNumber>{totalQuantity}</CartBagItemsNumber>
               </CartBagContainer>
               <SpanContainer>
                 <UserImage as={motion.img} whileTap={{ scale: 1.2 }} src={userIcon} alt=""/>

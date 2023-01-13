@@ -33,7 +33,7 @@ export const ServiceItem = styled.div`
 const serviceIcon = css`
   color: #fff;
   font-size: 2.8rem;
-  background-color: var(--primary-color);
+  background-color: ${props => props.theme.colors.primaryColor};
   padding: 10px;
   border-radius: 50%;
   font-weight: 400;

@@ -3,7 +3,7 @@ import { Button, H2, H3 } from "../../globalStyles/Global.styles";
 
 export const TimerCountSection = styled.section`
   padding: 50px 0;
-  background-color: var(--primary-color);
+  background-color: ${props => props.theme.colors.primaryColor};
   height: 350px;
   overflow: hidden;
   margin-bottom: 1.3rem;
@@ -49,7 +49,7 @@ export const TimerHeading = styled(H3)`
 `;
 export const TimerBtn = styled(Button)`
   background-color: #fff;
-  color: var(--primary-color);
+  color: ${props => props.theme.colors.primaryColor};
   font-weight: 600;
 `;
 export const RightContainer = styled.div`

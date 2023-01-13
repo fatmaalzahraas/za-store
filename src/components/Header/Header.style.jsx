@@ -87,7 +87,7 @@ export const NavMenuItem = styled.li`
   }
 `;
 export const NavMenuLink = styled(MenuLink)`
-  color: var(--primary-color);
+  color: ${props => props.theme.colors.primaryColor};
   font-weight: 500;
   cursor: pointer;
   height: 100%;
@@ -110,7 +110,7 @@ export const CartBagContainer = styled(SpanContainer)`
 `;
 export const CartBagIcon = styled(RiShoppingBagLine)`
   font-size: 1.4rem;
-  color: var(--primary-color);
+  color: ${props => props.theme.colors.primaryColor};
   cursor: pointer;
   @media (max-width: 768px) {
     font-size: 1.2rem;
@@ -121,7 +121,7 @@ export const CartBagItemsNumber = styled.span`
   position: absolute;
   top: -8%;
   right: -20%;
-  background-color: var(--primary-color);
+  background-color: ${props => props.theme.colors.primaryColor};
   color: #fff;
   width: 15px;
   height: 15px;
@@ -151,13 +151,13 @@ export const UserImage = styled.img`
 `;
 export const MobileContainer = styled.div`
   display: block;
-  @media (min-width: 768px) {
+  @media (min-width: 769px) {
     display: none;
   }
 `;
 export const MobileToggleIcon = styled(RiMenuLine)`
   font-size: 1.3rem;
-  color: var(--primary-color);
+  color: ${props => props.theme.colors.primaryColor};
   cursor: pointer;
   @media (max-width: 768px) {
     font-size: 1.2rem;

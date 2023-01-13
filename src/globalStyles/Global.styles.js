@@ -1,15 +1,16 @@
 import styled, { createGlobalStyle, css } from "styled-components";
 import { NavLink, Link } from "react-router-dom";
-
+export const theme = {
+  colors: {
+    primaryColor: "#0a1d37",
+    textColor: "#999",
+    heroBg: "#d6e5fb",
+    cartBg1: "#fdefe6",
+    cartBg2: "#ceebe9",
+    cartBg3: "#e2f2b2",
+  }
+}
 const GlobalStyle = createGlobalStyle`
-:root {
-    --primary-color: #0a1d37;
-    --text-color: #999;
-    --hero-bg: #d6e5fb;
-    --cart-bgc-01: #fdefe6;
-    --cart-bgc-03: #ceebe9;
-    --cart-bgc-04: #e2f2b2;
-    }
     * {
         box-sizing: border-box;
         padding: 0;
@@ -23,7 +24,7 @@ const GlobalStyle = createGlobalStyle`
     }
 `;
 const headingStyles = css`
-  color: var(--primary-color);
+  color: ${props => props.theme.colors.primaryColor};
   padding: 0;
   margin: 0;
   font-weight: 600;
@@ -41,19 +42,6 @@ export const MainContainer = styled.div`
 `;
 export const H1 = styled.h1`
   ${headingStyles}
-  font-size: 1.5rem;
-  @media (min-width: 576px) and (max-width: 767px) {
-    font-size: 2rem;
-  }
-  @media (min-width: 768px) and (max-width: 991px) {
-    font-size: 2.3rem;
-  }
-  @media (min-width: 992px) and (max-width: 1199.98px) {
-    font-size: 2.5rem;
-  }
-  @media (min-width: 1200px) {
-    font-size: 2.6rem;
-  }
 `;
 export const H2 = styled.h2`
   ${headingStyles}
@@ -66,7 +54,7 @@ export const H3 = styled.h3`
 export const TextWrapper = styled.p`
   margin: 0;
   padding: 0;
-  color: var(--text-color);
+  color: ${props => props.theme.colors.textColor};
   font-size: 1rem;
   @media (max-width: 767px) {
     font-size: 0.8rem;
@@ -90,7 +78,7 @@ export const Button = styled.button`
   cursor: pointer;
   border-radius: 5px;
   color: #fff;
-  background-color: var(--primary-color);
+  background-color: ${props => props.theme.colors.primaryColor};
   @media (max-width: 767px) {
     font-size: 0.8rem;
     padding: 7px 18px;

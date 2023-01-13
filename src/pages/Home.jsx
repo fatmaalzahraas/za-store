@@ -10,8 +10,11 @@ const Home = () => {
   const filteredProducts = (category) => {
     return productsData.filter(product => product.category === category);
   }
+  useEffect(() => {
+    window.scrollTo(0,0);
+  }, [])
   return (
-    <PageTitle title={"Home"}>
+    <PageTitle title="Home">
       <Hero />
       <Services />
       <ProductsContent filteredByCategory={filteredProducts("mobile")} title="Trending Products"/>
